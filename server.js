@@ -62,7 +62,7 @@ app.patch('/:id', async (req, res) => {
                 }
             }
         );
-        res.send(updateRecipe);
+        res.send("Recipe has been updated");
     } catch(err) {
         res.send(err)
     }
@@ -76,7 +76,7 @@ app.post('/recipes', (req, res) => {
         if (error){
             res.status(500).send(error)
         } else {
-            res.status(201).send(data)
+            res.status(201).send("Recipe created!")
         }
     })
 });
