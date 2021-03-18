@@ -39,7 +39,7 @@ app.get('/:id', async (req, res) => {
 
 
 //Delete
-app.delete('/:id', async (req, res) => {
+app.delete('/recipes/:id', async (req, res) => {
     try {
         const recipe = await RecipeModel.remove({_id: req.params.id});
         res.send("Recipe deleted!");
@@ -50,7 +50,7 @@ app.delete('/:id', async (req, res) => {
 
 
 //Update
-app.patch('/:id', async (req, res) => {
+app.patch('/recipes/:id', async (req, res) => {
     try {
         const updateRecipe = await RecipeModel.updateOne(
             {_id: req.params.id},
