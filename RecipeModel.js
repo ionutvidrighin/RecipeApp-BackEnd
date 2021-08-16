@@ -2,9 +2,14 @@ var mongoose = require('mongoose');
 
 
 var RecipeSchema = mongoose.Schema({
-    name: String,
-    ingredients: String,
-    description: String
+    category: string,
+    brand: string,
+    persons: number,
+    air: boolean,
+    transmission: string,
+    topOffer: boolean,
+    deal: boolean,
+    price: string
 });
 
 module.exports = mongoose.model('recipes', RecipeSchema);
